@@ -1,124 +1,115 @@
 # Real-Estate-Portal
 
-@admin login info
-@username:root
-@password: root
+Task:   
+1. Admin can see user details who bought, rent/posted and ad.  
+2. Admin can view enquiries, sort them based on some features like size/ price/ location and also delete them.  
 
-Project : RealState potal
-Database: RealState
-Username: root
-Password: root
+The is  Admin part of a Real state project.it includes:  
+1 mian class   
+3 JFrame  
 
-Task: 
-1:- Admin can see user details who bought, rent/posted and ad.
-2:- Admin can view enquiries, sort them based on some features like size/ price/ location and also delete them.
+Main Class:- RealState_Admin.java: get access to the admin login page.  
 
-This is  Admin part of a Real state project.it includes:
-1 mian class 
-3 JFrame
+Methods:-  
+  
+mysql_database_connection() :- Connect  with data base and return the connection.  
+   
+1st JFrame:- AdminLoginFrame (Login page for admin)  
+Admin authentication based on input. If pass then let user enter to the front page which is AdminFrontFrame.java   
 
-Main Class:- RealState_Admin.java: get access to the admin login page.
+Methods:-  
+   
+signInButtonActionPerformed():- When click teh sign in button. Check the username and password with database and get the user to sign in if match.  
 
-Methods:-
+usernameFieldActionPerformed():- Get the user to use move up and down to focus password field.  
 
-mysql_database_connection() :- Connect  with data base and return the connection.
- 
-1st JFrame:- AdminLoginFrame (Login page for admin)
-Admin authentication based on input. If pass then let user enter to the front page which is AdminFrontFrame.java 
+passwordFieldActionPerformed():- Get the user to use move up and down to focus password field  
 
-Methods:-
- 
-signInButtonActionPerformed():- When click teh sign in button. Check the username and password with database and get the user to sign in if match.
+usernameFieldKeyPressed():- code for add a feature that let user use up and down key for going to the password field.  
 
-usernameFieldActionPerformed():- Get the user to use move up and down to focus password field.
+passwordFieldKeyPressed():- code for add a feature that let user use up and down key for going to the admin field.  
 
-passwordFieldActionPerformed():- Get the user to use move up and down to focus password field
+2nd JFrame :- AdminFrontFrame (Front page for user.)  
 
-usernameFieldKeyPressed():- code for add a feature that let user use up and down key for going to the password field.
+buttons and features:  
 
-passwordFieldKeyPressed():- code for add a feature that let user use up and down key for going to the admin field.
+search        (Unavailable)  
 
-2nd JFrame :- AdminFrontFrame (Front page for user.)
+User details   (Available)     Go to user detail page.  
+Enquiries      (Available)     Go to enquiries page.  
+Logout         (Available)     Log out and go to admin login page.  
 
-buttons and features:
+Properties     (Unavailable)  
+New Admin      (Unavailable)  
 
-search        (Unavailable)
+Methods:-  
 
-User details   (Available)     Go to user detail page.
-Enquiries      (Available)     Go to enquiries page.
-Logout         (Available)     Log out and go to admin login page.
+userDetailsBActionPerformed():- Let admin to access the user AdminUserDetailFrame page where admin can see  details of user that boutgh, rent or post an ad  
 
-Properties     (Unavailable)
-New Admin      (Unavailable)
+enquiriesBActionPerformed():- Let admin to access the AdminEnquiryFrame page where admin can see all the enquiries from user and sort them based on price/ size/ location, also delete them.  
 
-Methods:-
+logoutActionPerformed():- Admin can log out and go to the login page by clicking log out button.  
 
-userDetailsBActionPerformed():- Let admin to access the user AdminUserDetailFrame page where admin can see  details of user that boutgh, rent or post an ad
+3rd JFrame:- AdminUserDetails: In this frame admin can see  details of user that bought, rent or post an ad  
 
-enquiriesBActionPerformed():- Let admin to access the AdminEnquiryFrame page where admin can see all the enquiries from user and sort them based on price/ size/ location, also delete them.
+button and feautures:  
 
-logoutActionPerformed():- Admin can log out and go to the login page by clicking log out button.
+Homepage         Go to admin front page.  
+Logout           Log out and go to admin login page.  
 
-3rd JFrame:- AdminUserDetails: In this frame admin can see  details of user that bought, rent or post an ad
+Sold             Select to add sold properties or bought propeties in the table.  
+In Rent          Select to add sold rent propeties in the table.  
+For Sold         Select to add advertisment properties that for sold.  
+For rent         Select to add advertisment properties that for rent.  
+Choice		 Choice Book ,advertisement  to show only relted checkbox and info into the table.  
 
-button and feautures:
+View              To view the user details in the right side.  
 
-Homepage         Go to admin front page.
-Logout           Log out and go to admin login page.
+Methods:-  
 
-Sold             Select to add sold properties or bought propeties in the table.
-In Rent          Select to add sold rent propeties in the table.
-For Sold         Select to add advertisment properties that for sold.
-For rent         Select to add advertisment properties that for rent.
-Choice		 Choice Book ,advertisement  to show only relted checkbox and info into the table.
+populate_table():- Set the data into the table.  
 
-View              To view the user details in the right side.
+adrChoiceActionPerformed():-  
+adsChoiceActionPerformed():-  
+rentChoiceActionPerformed():-  
+soldChoceActionPerformed():-  
+viewButtonActionPerformed():-  
+uidFieldActionPerformed():-  
+logoutButtonActionPerformed():-  
+homepageButtonActionPerformed():-  
+choice1itemStateChanged():-  
+uidFieldMouseEntred():-  
+uidFieldMouseExit():-  
+uidFieldMouseClicked():-  
 
-Methods:-
+4th JFrame:- AdminEnquiryFrame: In this frame, admin can see all the enquiries from user and sort them based on price/ size/ location, also delete them.  
 
-populate_table():- Set the data into the table.
+Button and feautures:  
 
-adrChoiceActionPerformed():-
-adsChoiceActionPerformed():-
-rentChoiceActionPerformed():-
-soldChoceActionPerformed():-
-viewButtonActionPerformed():-
-uidFieldActionPerformed():-
-logoutButtonActionPerformed():-
-homepageButtonActionPerformed():-
-choice1itemStateChanged():-
-uidFieldMouseEntred():-
-uidFieldMouseExit():-
-uidFieldMouseClicked():-
+Homepage         Go to admin front page.  
+Logout           Log out and go to admin login page.  
 
-4th JFrame:- AdminEnquiryFrame: In this frame, admin can see all the enquiries from user and sort them based on price/ size/ location, also delete them.
+Price            Select to add price in sorting list.  
+Size             Select to add size in sorting list.  
+Location         Select to add location in sorting list.  
+ChoiceOption     Chose option to add with related selection.Increasing->ASC Decreasing->DESC  
 
-Button and feautures:
+View             View selected or given enquiry in left side panel.  
+Delete		 Delete selected or given enquiry from database.  
 
-Homepage         Go to admin front page.
-Logout           Log out and go to admin login page.
+Methods:  
 
-Price            Select to add price in sorting list.
-Size             Select to add size in sorting list.
-Location         Select to add location in sorting list.
-ChoiceOption     Chose option to add with related selection.Increasing->ASC Decreasing->DESC
+populate_table():- Get the data from data base and set to table.  
 
-View             View selected or given enquiry in left side panel.
-Delete		 Delete selected or given enquiry from database.
-
-Methods:
-
-populate_table():- Get the data from data base and set to table.
-
-viewButtonActionPerformed():-
-deleteButtonActioinPerformed():-
-enquiryFieldActionPerformed():-
-location_CboxActionPerformed():-
-logoutButtonActionPerformed():-
-homepageButtonActionPerformed():-
-size_CboxActionPerformed():-
-price_CboxActionPerformed():-
-sorChoicePropertyChanged():-
-enquriyFieldMouseEntred():-
-enquiryFieldMouseExit():-
-enquiryFieldMouseClicked():-
+viewButtonActionPerformed():-  
+deleteButtonActioinPerformed():-  
+enquiryFieldActionPerformed():-  
+location_CboxActionPerformed():-  
+logoutButtonActionPerformed():-  
+homepageButtonActionPerformed():-  
+size_CboxActionPerformed():-  
+price_CboxActionPerformed():-  
+sorChoicePropertyChanged():-  
+enquriyFieldMouseEntred():-  
+enquiryFieldMouseExit():-  
+enquiryFieldMouseClicked():-  
