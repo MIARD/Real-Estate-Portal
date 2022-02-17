@@ -1,9 +1,13 @@
 # Real-Estate-Portal
 
-Task:   
+Task(Admin):   
 1. Admin can see user details who bought, rent/posted and ad.  
 2. Admin can view enquiries, sort them based on some features like size/ price/ location and also delete them.  
-
+  
+Task(User):
+1.  
+2.  
+  
 The is  Admin part of a Real state project.it includes:  
 1 mian class   
 3 JFrame  
